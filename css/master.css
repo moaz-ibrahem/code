@@ -8,9 +8,6 @@ html {
     scroll-behavior: smooth;
     height: 1000px;
 }
-.container {
-    margin: 0 5%;
-}
 ::-webkit-scrollbar{
     width: 15px;
 }
@@ -143,29 +140,28 @@ section .main .main_content .main_text .pargraph .btn{
  /* suporter */
 .suport {
     position: relative;
-    top: -5rem;
+    top: -4rem;
     display: flex;
-    border-radius: .5rem;
     align-items: center;
-    justify-content: space-around;
-    height: 100px;
+    justify-content: space-between;
+    border-radius: 1rem;
+    height: 110px;
     background: white;
+    padding: .5rem;
     margin: 0 8% ;
     z-index: 1000;
 }
 .suport .suport_img{
-    border-radius: 1.5rem;
     align-items: center;
-    margin: 0 45px;
+    margin: 0 10px;
     width: 100%;
-    height: 80px;
-    padding: 1rem;
+    height: 100%;
+    padding: 1.5rem 2rem;
     background: #fff;
-    
 }
 .suport .suport_img img{
     width: 100%;
-    height: 6vh;
+    height: 100%;
 }
 /* invent */
 .invent{
@@ -176,9 +172,9 @@ section .main .main_content .main_text .pargraph .btn{
     display: flex;
 }
 .invent .invent_img{
-    padding: 30px;
-    margin-left: 10%;
-    width: 30%;
+    margin: auto;
+    padding-right: 5rem;
+    max-width: 100%;
     height: 400px;
 }
 .invent .invent_img img{
@@ -188,12 +184,13 @@ section .main .main_content .main_text .pargraph .btn{
 .invent .invent_text {
     margin-left: 3%;
     padding: 30px;
-    width: 50%;
+    max-width: 60%;
     
 }
 .invent .invent_text h1{
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 70px;
+    font-weight: 600;
 }
 .invent .invent_text h1 span{
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
@@ -215,3 +212,101 @@ section .main .main_content .main_text .pargraph .btn{
     background: linear-gradient(to right,#4a66ea,#a845e2);
     border-radius: 10px;
 }
+/* services */
+.services{
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+.services .box{
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f8;
+}
+.services .box .header{
+    position: relative;
+    max-width: 35%;
+    font-size: 2.7rem;
+    margin-left: 3rem;
+    line-height: 60px;
+    font-weight: 600;
+}
+.services .box .header span{
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.services .box .anther {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 50px;
+}
+.services .box .anther p{
+    width: 100%;
+    font-size: 1.6rem;
+}
+.services .box .anther p::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 1px;
+    background-color:#636060 ;
+    margin-top: 70px;
+}
+.services .box .anther p:nth-child(3)::before{
+    content: '';
+    background: transparent;
+}
+.services .box .anther i{
+    position: absolute;
+    right:22%;
+    line-height: 50px;
+}
+.services .box .anther h2{
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services .box .anther .par_projecet{
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 30px;
+    color: #000000;
+    margin: 10px 0;
+}
+.services .box .anther .btt {
+    position: relative;
+}
+
+.services .box .anther .btt span{
+    position: absolute;
+    font-size: 1.2rem;
+    top: 0.4rem;
+    width: 100%;
+    color: #000000;
+}
+.services .box .anther .btt .btn{
+    text-decoration: none;
+    margin-top: 3.2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    border: 1px solid #4a66ea;
+    border-radius: 0.3rem;
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services .box .anther .btt .btn i{
+    position: relative;
+    margin-left: 20px;
+    right: 0;
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
