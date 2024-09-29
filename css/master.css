@@ -309,4 +309,73 @@ section .main .main_content .main_text .pargraph .btn{
     -webkit-text-fill-color: transparent;
 }
 
+/* rectangel vr  */
+.rectangel {
+    padding-top: 5rem ;
+    padding-bottom: 5rem ;
+}
+.rectangel .header{
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    color: #000000;
+    font-weight: 600;
+}
+.rectangel .header span{
+    color: #a845e2;
+}
+.rectangel .card_vr{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/Vector\ \(1\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 20rem;
+    transition: 0.3s;
+    
+}
+.rectangel .card_vr:hover{
+    background: black;
+    background-image: url(../img/Vector.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15rem;
+}
+.rectangel .vr_img{
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+    background-color: #dadada;
+}
+
+.rectangel .vr_img img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+}
+.rectangel .card_vr:hover .vr_img img{
+    transform: scale(1.1) rotate(5deg);
+}
+.rectangel .vr_text {
+    padding: 1rem;
+    color: #000000;
+    font-weight: 600px;
+    font-size: 1.2rem;
+    transition: 0.3;
+}
+.rectangel .card_vr:hover .vr_text {
+    color: #fff;
+}
+.rectangel .vr_link i{
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+.rectangel .card_vr:hover .vr_link i{
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
