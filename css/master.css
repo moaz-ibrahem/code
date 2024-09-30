@@ -339,8 +339,8 @@ section .main .main_content .main_text .pargraph .btn{
     background-image: url(../img/Vector.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 15rem;
+    background-position: bottom 15px right 30px;
+    background-size: 12rem;
 }
 .rectangel .vr_img{
     height: 70%;
@@ -357,7 +357,7 @@ section .main .main_content .main_text .pargraph .btn{
     transition: 0.5s all ease-in-out;
 }
 .rectangel .card_vr:hover .vr_img img{
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(1deg);
 }
 .rectangel .vr_text {
     padding: 1rem;
@@ -374,6 +374,63 @@ section .main .main_content .main_text .pargraph .btn{
     padding-left: 1rem;
 }
 .rectangel .card_vr:hover .vr_link i{
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* decoded */
+.decoded {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.decoded .decoded_future{
+    background: #000000;
+    background-image: url(../img/decadod.png);
+    background-position: top -15rem right -5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .8rem;
+    padding: 5rem 0 5rem 3rem;
+    width: 100%;
+}
+.decoded .decoded_future h2{
+    font-size: 4rem;
+    font-weight: 600;
+    width: 50%;
+    color: #fff;
+}
+.decoded .decoded_future h2 span{
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.decoded .decoded_future .par_projecet{
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 2rem 0;
+    line-height: 35px;
+    width: 50%;
+}
+.decoded .decoded_future .btt{
+    position: relative;
+}
+.decoded .decoded_future .btt a {
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    width: 35%;
+    padding: 10px;
+    border: 1px solid #4a66ea;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.decoded .decoded_future .btt a i{
+    position: relative;
+    margin-left: 10px;
+    right: 0;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
