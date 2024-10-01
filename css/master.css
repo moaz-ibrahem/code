@@ -419,7 +419,7 @@ section .main .main_content .main_text .pargraph .btn{
     text-decoration: none;
     margin-top: 1rem;
     font-size: 1.2rem;
-    width: 35%;
+    width: 30%;
     padding: 10px;
     border: 1px solid #4a66ea;
     border-radius: 0.5rem;
@@ -429,10 +429,156 @@ section .main .main_content .main_text .pargraph .btn{
 }
 .decoded .decoded_future .btt a i{
     position: relative;
-    margin-left: 10px;
+    margin-left: 20px;
     right: 0;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* expert */
+.expert {
+    padding: 5rem 0;
+}
+.expert h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    color: #000000;
+}
+.expert h1 span {
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.expert .cust_reviwe {
+    width: 35%;
+    position: relative;
+    background: linear-gradient(to right bottom,#00eef8,#4a66ea,#a845e2,#4a66ea);
+    padding:3rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+.expert .cust_reviwe .img_cust{
+    width: 100px;
+    height: 100px;
+    top: 2rem;
+    left: 4rem;
+}
+.expert .cust_reviwe .img_cust img{
+    width: 100%;
+    height: 100%;
+}
+.expert .cust_reviwe .par{
+    margin: 4rem 0;
+}
+.expert .cust_reviwe .par p{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+.expert .cust_reviwe .name_cust{
+    border-top: 1px solid #fff;
+    width: 26rem;
+    padding-top: 2rem;
+    color: #fff;
+}
+.expert .cust_reviwe .name_cust h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.expert .cust_reviwe .name_cust p{
+    font-size: 1.2rem;
+}
+.expert .cust {
+    width:20%;
+    position: relative;
+    background: linear-gradient(to right bottom,#00eef8,#4a66ea,#a845e2,#4a66ea);
+    padding:2rem 1rem 1rem 2rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+.expert .cust .img_cust{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+}
+.expert .cust .img_cust img{
+    width: 100%;
+    height: 100%;
+}
+.expert .cust .par{
+    padding-top: 11rem;
+    padding-bottom: 3.5rem;
+} 
+.expert .cust .par p{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+}
+.expert .cust .name_cust{
+    border-top: 1px solid #fff;
+    width: 15rem;
+    padding-top: 2rem;
+    color: #fff;
+}
+.expert .cust .name_cust h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.expert .cust .name_cust p{
+    font-size: 1.2rem;
+}
+.expert .img_code {
+    margin-left: 3.5rem;
+    margin-top: 18rem;
+}
+/* communicate */
+.communicate {
+    padding: 5rem 0;
+    width: 100%;
+}
 
+.communicate .texet_communicate {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* margin-left: 3rem; */
+    padding: 0 5rem;
+}
+.communicate .texet_communicate img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+.communicate .texet_communicate h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+.communicate .texet_communicate h2 span{
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.communicate .texet_communicate p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    font-size: 1.2rem;
+}
