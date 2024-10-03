@@ -545,8 +545,8 @@ section .main .main_content .main_text .pargraph .btn{
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: 32rem;
-    right: 14rem;
+    top: 14rem;
+    right: 10rem;
     color: #fff;
     padding: 2.5rem;
     background: #b4b3ba;
@@ -559,17 +559,17 @@ section .main .main_content .main_text .pargraph .btn{
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-    left: 2rem;
+    left: 3rem;
 }
 .expert .cod_e {
     width: 30%;
-    position: absolute;
-    right: -4rem;
+    position: relative;
+    left: 63rem;
 }
 /* communicate */
 .communicate {
     padding: 5rem 0;
-    padding-top: 40rem;
+    padding-top: 20rem;
     width: 100%;
 }
 
