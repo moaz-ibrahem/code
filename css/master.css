@@ -130,14 +130,23 @@ section .main .main_content .main_text .pargraph P{
 section .main .main_content .main_text .pargraph .btn{
     text-decoration: none;
     position: absolute;
-    top: 180%;
+    top: 115%;
     font-size: 20px;
     color: white;
-    padding: 20px 50px;
+    padding: 20px 90px 20px 40px;
     background: linear-gradient(to right,#4a66ea,#a845e2);
     border-radius: 10px;
 }
- /* suporter */
+section .main .main_content .main_text .pargraph .btn i{
+    font-size: 0.9rem;
+    position: absolute;
+    padding: 3px;
+    padding-bottom: 0;
+    margin-left: 2rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+/* suporter */
 .suport {
     position: relative;
     top: -4rem;
@@ -205,17 +214,16 @@ section .main .main_content .main_text .pargraph .btn{
     margin-left: 3%;
     padding: 30px;
     max-width: 60%;
-    
 }
 .invent .invent_text h1{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     line-height: 70px;
     font-weight: 600;
 }
 .invent .invent_text h1 span{
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
 }
 .invent .invent_text p{
     font-size: 18px;
@@ -223,14 +231,23 @@ section .main .main_content .main_text .pargraph .btn{
     color: #3f3f3f;
 }
 .invent .invent_text .btn{
-    text-decoration: none;
     position: absolute;
+    text-decoration: none;
     font-size: 18px;
     color: white;
     margin-top: 1rem;
-    padding: 10px 30px;
+    padding: 10px 50px 10px 30px;
     background: linear-gradient(to right,#4a66ea,#a845e2);
     border-radius: 10px;
+}
+.invent .invent_text .btn i{
+    font-size: 0.9rem;
+    position: absolute;
+    padding: 3px;
+    padding-bottom: 0;
+    margin-left: 0.5rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
 }
 /* services */
 .services{
@@ -245,7 +262,7 @@ section .main .main_content .main_text .pargraph .btn{
 }
 .services .box .header{
     position: relative;
-    max-width: 35%;
+    max-width: 40%;
     font-size: 2.7rem;
     margin-left: 3rem;
     line-height: 60px;
@@ -264,25 +281,41 @@ section .main .main_content .main_text .pargraph .btn{
     line-height: 50px;
 }
 .services .box .anther p{
-    width: 100%;
-    font-size: 1.6rem;
+    position: relative;
+    width: 80%;
+    font-size: 1.5rem;
 }
 .services .box .anther p::before{
     content: '';
     position: absolute;
-    width: 400px;
+    width: 100%;
     height: 1px;
     background-color:#636060 ;
-    margin-top: 70px;
+    margin-top: 50px;
 }
-.services .box .anther p:nth-child(3)::before{
+.services .box .anther p:nth-child(4)::before{
     content: '';
     background: transparent;
 }
-.services .box .anther i{
+.services .box .anther p .bi-chevron-down{
     position: absolute;
-    right:22%;
-    line-height: 50px;
+    right: 0;
+    font-size: 1.5rem;
+    height: 1.5rem; 
+    border-radius: 50%; 
+    z-index: 1;
+}
+.services .box .anther p .bi-chevron-down::after{
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0.6rem;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #000000;
+    z-index: -1;
 }
 .services .box .anther h2{
     font-size: 2rem;
@@ -311,8 +344,8 @@ section .main .main_content .main_text .pargraph .btn{
 }
 .services .box .anther .btt .btn{
     text-decoration: none;
-    margin-top: 3.2rem;
-    font-size: 1.2rem;
+    margin-top: 3.5rem;
+    font-size: 1.1rem;
     width: 100%;
     border: 1px solid #4a66ea;
     border-radius: 0.3rem;
@@ -327,6 +360,10 @@ section .main .main_content .main_text .pargraph .btn{
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    rotate: -50deg;
+}
+.services .carousel-item {
+    z-index: 1;
 }
 
 /* rectangel vr  */
@@ -336,15 +373,19 @@ section .main .main_content .main_text .pargraph .btn{
     padding-bottom: 5rem ;
 }
 .rectangel .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rectangel h1{
     font-size: 3.2rem;
     margin-bottom: 3rem;
     color: #000000;
     font-weight: 600;
 }
 .rectangel a{
-    position: absolute;
-    top: 7.5rem;
-    right: 7.5rem;
+    position: relative;
+    margin-right: 2rem;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -361,13 +402,15 @@ section .main .main_content .main_text .pargraph .btn{
     color: #a845e2;
 }
 .rectangel .card_vr{
-    width: 100%;
-    height: 500px;
+    width: 94%;
+    height: 540px;
+    margin: 0 1%;
     background-image: url(../img/Vector\ \(1\).png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 20rem;
+    border-radius: 0.8rem;
     transition: 0.3s;
     
 }
@@ -384,6 +427,7 @@ section .main .main_content .main_text .pargraph .btn{
     overflow: hidden;
     position: relative;
     background-color: #dadada;
+    border-radius: .8rem;
 }
 
 .rectangel .vr_img img{
@@ -397,23 +441,32 @@ section .main .main_content .main_text .pargraph .btn{
     transform: scale(1.1) rotate(1deg);
 }
 .rectangel .vr_text {
-    padding: 1rem;
+    padding: 1rem 2rem;
+}
+.rectangel .vr_text .vr_par {
     color: #000000;
     font-weight: 600px;
     font-size: 1.2rem;
     transition: 0.3;
 }
-.rectangel .card_vr:hover .vr_text {
+.rectangel .card_vr:hover .vr_text .vr_par {
     color: #fff;
 }
-.rectangel .vr_link i{
-    font-size: 2.5rem;
-    padding-left: 1rem;
+.rectangel .vr_text .vr_link {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 0.8rem;
+    background: #3f3f3f;
 }
-.rectangel .card_vr:hover .vr_link i{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.rectangel .vr_text .vr_link i{
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    color: #fff;
+}
+.rectangel .card_vr:hover .vr_text .vr_link {
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2, #a845e2);
 }
 /* decoded */
 .decoded {
@@ -433,7 +486,7 @@ section .main .main_content .main_text .pargraph .btn{
 .decoded .decoded_future h2{
     font-size: 3rem;
     font-weight: 600;
-    width: 35%;
+    width: 45%;
     color: #fff;
 }
 .decoded .decoded_future h2 span{
@@ -447,7 +500,7 @@ section .main .main_content .main_text .pargraph .btn{
     font-weight: 400;
     margin: 2rem 0;
     line-height: 35px;
-    width: 35%;
+    width: 45%;
 }
 .decoded .decoded_future .btt{
     position: relative;
@@ -456,17 +509,26 @@ section .main .main_content .main_text .pargraph .btn{
     text-decoration: none;
     margin-top: 1rem;
     font-size: 1rem;
-    width: 25%;
-    padding: 10px;
+    width: 30%;
     border: none;
     outline: none;
     position: relative;
+    border: 1px solid #fff;
     border-radius: 0.5rem;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     z-index: 1;
+}
+.decoded .decoded_future .btt a i{
+    position: relative;
+    margin-left: 20px;
+    right: 0;
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    rotate: -50deg;
 }
 /* .decoded .decoded_future .btt a::after {
     content: attr(data);
@@ -496,12 +558,16 @@ section .main .main_content .main_text .pargraph .btn{
 }
 /* expert */
 .expert {
+    padding-top: 5rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .expert h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 600;
-    margin-bottom: 4rem;
+    padding: 0 0 4rem 0rem;
     color: #000000;
 }
 .expert h1 span {
@@ -509,44 +575,59 @@ section .main .main_content .main_text .pargraph .btn{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.expert .code-slider {
-    width: 68%;
-    left: 6.7rem;
+.expert .swiper-wrapper::after {
+    content: '';
+    width: 100000%;
+    height: 1px;
+    top: 29rem;
+    left: 65rem;
+    background: #fff;
     position: absolute;
+    z-index: 100;
+} 
+.expert .expert_revew {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.expert .code-slider {
+    position: relative;
+    width: 95%;
+    margin-left: 0;
+    margin-right: 1rem;
 }
 .expert .cust_reviwe {
-    width: 40%;
     position: relative;
-    background: linear-gradient(to right bottom,#00eef8,#4a66ea,#a845e2,#4a66ea);
-    padding:3rem;
-    padding-bottom: 1rem;
-    margin-left: 2rem;
-    border-radius: 1rem;
+    width: 432px;
+    height: 594px;
+    background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2, #9f41e2, #9f41e2, #9f41e2 );
+    padding:0 2rem ;
+    margin-right: 1rem;
+    border-radius: .5rem;
 }
 .expert .cust_reviwe .img_cust{
-    width: 100px;
-    height: 100px;
-    top: 2rem;
-    left: 4rem;
+    width: 180px;
+    height: 180px;
+    padding-top: 3rem;
 }
 .expert .cust_reviwe .img_cust img{
     width: 100%;
     height: 100%;
+    background-size: cover;
 }
 .expert .cust_reviwe .par{
-    margin: 4rem 0;
+    padding: 3rem 2rem 3rem 1rem;
 }
 .expert .cust_reviwe .par p{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 2rem;
 }
-.expert .cust_reviwe .name_cust{
-    border-top: 1px solid #fff;
-    width: 22.8rem;
-    padding-top: 2rem;
+.expert .cust_reviwe .name_cust {
     color: #fff;
+    padding: 3rem 0 2rem 1rem;
 }
 .expert .cust_reviwe .name_cust h3{
     font-size: 1.3rem;
@@ -556,39 +637,38 @@ section .main .main_content .main_text .pargraph .btn{
     font-size: 1.2rem;
 }
 .expert .cust {
-    width:26%;
+    width:255px;
+    height: 594px;
     position: relative;
-    background: linear-gradient(to right bottom,#00eef8,#4a66ea,#a845e2,#4a66ea);
-    padding:2rem 1rem 1rem 2rem;
-    border-radius: 1rem;
-    margin-left: 2rem;
+    background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2, #9f41e2, #9f41e2, #9f41e2 );
+    padding-left:2rem;
+    border-radius: .5rem;
+    margin-right: 1rem;
 }
 .expert .cust .img_cust{
-    width: 70px;
-    height: 70px;
     position: absolute;
-    top: 4rem;
-    right: 3rem;
+    width: 80px;
+    height: 80px;
+    top: 1.8rem;
+    right: 1.3rem;
 }
 .expert .cust .img_cust img{
     width: 100%;
     height: 100%;
+    background-size: cover;
 }
 .expert .cust .par{
-    padding-top: 11rem;
-    padding-bottom: 5rem;
+    padding: 14.5rem .5rem 1rem .5rem;
 } 
 .expert .cust .par p{
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
 }
 .expert .cust .name_cust{
-    border-top: 1px solid #fff;
-    width: 15rem;
-    padding-top: 2rem;
     color: #fff;
+    padding: 6rem 0 2rem 1rem;
 }
 .expert .cust .name_cust h3{
     font-size: 1.3rem;
@@ -601,11 +681,21 @@ section .main .main_content .main_text .pargraph .btn{
     margin-left: 3.5rem;
     margin-top: 18rem;
 }
+.expert .cod_e {
+    position: relative;
+    width: 30%;
+    height: 594px;
+}
+.expert .cod_e .img_code {
+    width: 115px;
+    height: 115px;
+    margin-top: 19rem;
+}
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: 14rem;
-    right: 10rem;
+    margin-top: 13.5rem;
+    left: 45%;
     color: #fff;
     padding: 2.5rem;
     background: #b4b3ba;
@@ -618,46 +708,34 @@ section .main .main_content .main_text .pargraph .btn{
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-    left: 3rem;
-}
-.expert .cod_e {
-    width: 30%;
-    position: relative;
-    left: 63rem;
+    left: 1rem;
 }
 /* communicate */
 .communicate {
-    padding: 5rem 0;
-    padding-top: 20rem;
+    padding: 10rem 0 1rem 0;
     width: 100%;
 }
 
 .communicate .texet_communicate {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    /* margin-left: 3rem; */
-    padding: 0 5rem;
+    position: relative;
+    width: 100%;    
 }
 .communicate .texet_communicate img {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
 }
 .communicate .texet_communicate h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
     font-size: 3rem;
     font-weight: 600;
-    margin: 2rem 0;
+    margin: auto;
+    margin-top: 1.5rem;
+
 }
 .communicate .texet_communicate h2 span{
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
@@ -665,16 +743,15 @@ section .main .main_content .main_text .pargraph .btn{
     -webkit-text-fill-color: transparent;
 }
 .communicate .texet_communicate p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 75%;
+    text-align: center;
     margin: auto;
+    margin-top: 2rem ;
     font-size: 1.2rem;
 }
 /* slider */
 #tranding {
-    padding: 2rem 0;
+    position: relative;
     padding-bottom: 0;
 }
 
@@ -685,9 +762,9 @@ section .main .main_content .main_text .pargraph .btn{
 }
 
 #tranding .tranding-slider {
-    height: 50rem;
-    padding: 2rem 0;
     position: relative;
+    height: 50rem;
+    padding: 5rem 0;
 }
 
 @media (max-width:500px) {
@@ -695,17 +772,26 @@ section .main .main_content .main_text .pargraph .btn{
         height: 45rem;
     }
 }
-
+/* .swiper-wrapper {
+    width: 100%;
+} */
 .tranding-slide {
-    width: 25rem;
-    height: 30rem;
     position: relative;
+    width: 20rem;
+    height: 21rem;
+    margin-left: -6.5rem;
     background-color: #f7f7f8;
     border-radius: 1.5rem;
     transition: 0.5s;
+    box-shadow: 0 0 5px #777;
+    transform: translate3d(-50%, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+    /* z-index: -1 !important; */
 }
 .tranding-slide:hover {
     background-color: #000000;
+}
+.swiper-wrapper .tranding-slide:hover{
+    z-index: 2 !important;
 }
 
 @media (max-width:500px) {
@@ -749,11 +835,11 @@ section .main .main_content .main_text .pargraph .btn{
 
 .tranding-slide-content .tranding-slide-content-bottom {
     position: absolute;
-    bottom: 10rem;
+    top: 5rem;
     left: 1rem;
 }
 .tranding-slide-content .tranding-slide-content-bottom .slide-name{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #000000;
     line-height: 2rem;
     padding: 2rem;
@@ -846,9 +932,6 @@ section .main .main_content .main_text .pargraph .btn{
     background: var(--primary);
 }
 /* contact us  */
-.contant_us {
-    /* padding: 3rem 0; */
-}
 .contant_us h1{
     font-size: 3.5rem ;
     font-weight: 600;
@@ -883,12 +966,11 @@ section .main .main_content .main_text .pargraph .btn{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
-    padding-right:2rem ;
 }
 .contant_us .contant_reviwo .groub_button a{
     text-decoration: none;
     position: relative;
-    font-size: 18px;
+    font-size: 100%;
     padding: 1rem 2rem;
     border: 1px solid #767676;
     border-radius: .7rem;
@@ -897,7 +979,7 @@ section .main .main_content .main_text .pargraph .btn{
     transition: 0.5s;
 }
 .contant_us .contant_reviwo .groub_button a:hover{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
 }
 .contant_us .contant_reviwo form {
     padding: 1rem 0 2rem 0;
@@ -953,14 +1035,21 @@ section .main .main_content .main_text .pargraph .btn{
 /* footer  */
 .footer {
     position: relative;
-    background: #000000;
-    background-image: url(../img/Frame.png);
-    background-position: left 10rem top;
-    background-size: 80rem;
-    background-repeat: no-repeat;
     height: 500px;
     margin-top: 5rem;
     padding: 5rem 1rem;
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #000000;
+    background-image: url(../img/Frame.png);
+    background-position: center;
+    background-size: 80rem;
+    background-repeat: no-repeat;
     z-index: -2;
 }
 .footer .circal{
@@ -984,12 +1073,13 @@ section .main .main_content .main_text .pargraph .btn{
     z-index: -1;
 }
 .footer .footer_img {
-    z-index: 3;
+    z-index: 2 ;
 }
 .footer .footer_img P{
     color: #FFF;
     margin: 2.5rem 0;
     line-height: 2rem;
+    z-index: 2;
 }
 .footer ul{
     display: flex;
@@ -1009,26 +1099,44 @@ section .main .main_content .main_text .pargraph .btn{
     color: #f7f7f8;
 }
 .footer .links {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-top: 3rem;
+    position: relative;
+    margin-top: 2rem;
     margin-left: 3.5rem;
 }
 .footer .links p {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 1.1rem;
-    margin-right: 2rem;
+    font-size: 1.3rem;
+    align-items: center;
+    margin-right: 1rem;
 }
-.footer .links .link a{
-    background: #fff;
+.footer .links .link {
+    margin-left: 10rem;
+    z-index: 2;
+    cursor: pointer;
+}
+.footer .links .link i{
+    position: relative;
     padding: 0.8rem;
     border-radius: 50%;
-    font-size: 1.6rem;
-    margin: 0 1rem;
-}
-.footer .links .link a i{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    font-size: 1.5rem;
+    background: linear-gradient(to right,#00eef8,#a845e2 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.footer .links .link i::after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
 }
