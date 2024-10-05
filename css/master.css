@@ -772,28 +772,45 @@ section .main .main_content .main_text .pargraph .btn i{
         height: 45rem;
     }
 }
-/* .swiper-wrapper {
-    width: 100%;
-} */
 .tranding-slide {
     position: relative;
-    width: 20rem;
-    height: 21rem;
-    margin-left: -6.5rem;
+    width: 298px;
+    height: 320px;
+    margin-left: -6.1rem;
     background-color: #f7f7f8;
     border-radius: 1.5rem;
     transition: 0.5s;
-    box-shadow: 0 0 5px #777;
-    transform: translate3d(-50%, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
-    /* z-index: -1 !important; */
-}
-.tranding-slide:hover {
-    background-color: #000000;
-}
-.swiper-wrapper .tranding-slide:hover{
-    z-index: 2 !important;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
 
+#tranding-slide-1 {
+    z-index: 1 !important;
+    margin-left: .5rem;
+}
+#tranding-slide-2 {
+    z-index: -2 !important;
+}
+#tranding-slide-3 {
+    z-index: -3 !important;
+}
+#tranding-slide-4 {
+    z-index: -4 !important;
+}
+#tranding-slide-5 {
+    z-index: -5 !important;
+}
+#tranding-slide-6 {
+    z-index: -6 !important;
+}
+.swiper-wrapper #tranding-slide-1:hover,
+#tranding-slide-2:hover,
+#tranding-slide-3:hover,
+#tranding-slide-4:hover,
+#tranding-slide-5:hover,
+#tranding-slide-6:hover{
+    background-color: #000000;
+    z-index: 2 !important;
+}
 @media (max-width:500px) {
     .tranding-slide {
         width: 28rem !important;
@@ -837,6 +854,54 @@ section .main .main_content .main_text .pargraph .btn i{
     position: absolute;
     top: 5rem;
     left: 1rem;
+}
+#tranding-slide-1 .tranding-slide-content-bottom a{
+    position: absolute;
+    display: block;
+    top: 95%;
+    left: 85%;
+    transform: translate(-15%, -5%);
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+#tranding-slide-1 .tranding-slide-content-bottom i{
+    position: absolute;
+    top: 97%;
+    left: 85%;
+    transform: translate(-15%, -3%);
+    color: #fff;
+    transition: 0.5s;
+    display: none;
+}
+.tranding-slide .tranding-slide-content-bottom a{
+    position: absolute;
+    display: block;
+    top: 12rem;
+    left: 85%;
+    transform: translate(-15%, -5%);
+    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+.tranding-slide .tranding-slide-content-bottom i{
+    position: absolute;
+    top: 12rem;
+    left: 85%;
+    transform: translate(-15%, -3%);
+    color: #fff;
+    transition: 0.5s;
+    display: none;
+}
+#tranding-slide-1:hover .tranding-slide-content-bottom a,
+.tranding-slide:hover .tranding-slide-content-bottom a{
+    display: none;
+}
+#tranding-slide-1:hover .tranding-slide-content-bottom i,
+.tranding-slide:hover .tranding-slide-content-bottom i{
+    display: block;
 }
 .tranding-slide-content .tranding-slide-content-bottom .slide-name{
     font-size: 1rem;
@@ -1037,7 +1102,7 @@ section .main .main_content .main_text .pargraph .btn i{
     position: relative;
     height: 500px;
     margin-top: 5rem;
-    padding: 5rem 1rem;
+    padding: 5rem 0rem;
 }
 .footer::before {
     content: '';
