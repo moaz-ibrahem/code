@@ -136,14 +136,18 @@ section .main .main_content .main_text .pargraph .btn{
     padding: 20px 90px 20px 40px;
     background: linear-gradient(to right,#4a66ea,#a845e2);
     border-radius: 10px;
+    outline: none;
+    border: none;
 }
 section .main .main_content .main_text .pargraph .btn i{
     font-size: 0.9rem;
     position: absolute;
     padding: 3px;
+    outline: none;
+    border: none;
     padding-bottom: 0;
     margin-left: 2rem;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
 }
 /* suporter */
