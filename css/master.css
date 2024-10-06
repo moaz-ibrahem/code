@@ -482,6 +482,7 @@ section .main .main_content .main_text .pargraph .btn i{
     border-radius: .8rem;
     padding: 5rem 0 5rem 3rem;
     width: 100%;
+    z-index: -2;
 }
 .decoded .decoded_future h2{
     font-size: 3rem;
@@ -502,52 +503,50 @@ section .main .main_content .main_text .pargraph .btn i{
     line-height: 35px;
     width: 45%;
 }
-.decoded .decoded_future .btt{
+.decoded .decoded_future .btn{
+    --border-width: 1px ;
+    --border-radius: 0.5rem ;
+    font: inherit;
+    background:  linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
+    border: 0;
+    color: #fff;
+    padding: 1rem 2rem;
     position: relative;
+    border-radius: var(--border-radius);
+    z-index: 1;
 }
-.decoded .decoded_future .btt a {
+.decoded .decoded_future .btn a {
     text-decoration: none;
-    margin-top: 1rem;
-    font-size: 1rem;
-    width: 30%;
-    border: none;
-    outline: none;
-    position: relative;
-    border: 1px solid #fff;
-    border-radius: 0.5rem;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    cursor: pointer;
-    z-index: 1;
-}
-.decoded .decoded_future .btt a i{
+    font-size: 1rem;
     position: relative;
-    margin-left: 20px;
+    cursor: pointer;
+}
+.decoded .decoded_future .btn a i{
+    position: relative;
+    margin-left: 10px;
+    font-size: 1.3rem;
     right: 0;
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     rotate: -50deg;
 }
-/* .decoded .decoded_future .btt a::after {
-    content: attr(data);
-    font-size: 16px;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.decoded .decoded_future .btt a::before {
-    content: "";
+.decoded .decoded_future .btn::after {
+    content: '';
+    display: block;
+    width: calc(100% - calc(var(--border-width) * 2));
+    height: calc(100% - calc(var(--border-width) * 2));
+    background: #000000;
     position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    right: 1px;
-    background: white;
-    border-radius: 0.5rem;
+    top: var(--border-width);
+    left: var(--border-width);
+    border-radius: calc(var(--border-radius) - var(--border-width));
     z-index: -1;
-} */
+    transition: 0.3s;
+}
 .decoded .decoded_future .btt a i{
     position: relative;
     margin-left: 20px;
@@ -757,7 +756,7 @@ section .main .main_content .main_text .pargraph .btn i{
 
 @media (max-width:1440px) {
     #tranding {
-        padding: 7rem 0;
+        padding: 3rem 0;
     }
 }
 
@@ -1013,7 +1012,6 @@ section .main .main_content .main_text .pargraph .btn i{
     padding-top: 4rem;
     padding-left: 3.5rem;
     border-radius: 0.5rem;
-    /* height:  50rem; */
 }
 .contant_us .contant_reviwo .header_contant {
     margin-bottom: 2rem;
@@ -1032,19 +1030,33 @@ section .main .main_content .main_text .pargraph .btn i{
     justify-content: space-between;
     margin-bottom: 2rem;
 }
-.contant_us .contant_reviwo .groub_button a{
-    text-decoration: none;
-    position: relative;
-    font-size: 100%;
-    padding: 1rem 2rem;
-    border: 1px solid #767676;
-    border-radius: .7rem;
+.contant_us .contant_reviwo .groub_button .btn{
+    --border-width: 2px ;
+    --border-radius: 0.5rem ;
+    font: inherit;
+    background:  linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
+    border: 0;
     color: #fff;
-    background: #000000;
-    transition: 0.5s;
+    padding: 1rem 2rem;
+    position: relative;
+    border-radius: var(--border-radius);
+    z-index: 1;
 }
-.contant_us .contant_reviwo .groub_button a:hover{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
+.contant_us .contant_reviwo .groub_button .btn::before{
+    content: '';
+    display: block;
+    width: calc(100% - calc(var(--border-width) * 2));
+    height: calc(100% - calc(var(--border-width) * 2));
+    background: #000000;
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+    border-radius: calc(var(--border-radius) - var(--border-width));
+    z-index: -1;
+    transition: 0.3s;
+}
+.contant_us .contant_reviwo .groub_button .btn:hover::before{
+    background:transparent;
 }
 .contant_us .contant_reviwo form {
     padding: 1rem 0 2rem 0;
