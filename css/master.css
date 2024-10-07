@@ -777,7 +777,7 @@ section .main .main_content .main_text .pargraph .btn img{
     left: 45%;
     color: var(--white-color);
     padding: 2.5rem;
-    background: #b4b3ba;
+    background: var(--black-color);
     border-radius: 50%;
     transition: 0.5s;
 }
