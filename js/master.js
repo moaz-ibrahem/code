@@ -27,6 +27,7 @@ var codeSlider = new Swiper('.code-slider', {
         prevEl: '.swiper-button-prev',
     }
 });
+// swiber tranding 
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -44,4 +45,16 @@ var TrandingSlider = new Swiper('.tranding-slider', {
         el: '.swiper-pagination',
         clickable: true,
     },
+});
+// #################
+
+$(document).ready(function() {
+    $(".btn_contact").hover(function() {
+        $(".btn_contact").removeClass("active");
+        $(this).addClass("active");
+    })
+    // $(".btn").click(function() {
+    //     $(".btn").removeClass("active");
+    //     $(this).addClass("active");
+    // })
 });
