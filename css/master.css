@@ -241,6 +241,7 @@ section .main .main_content .main_text .pargraph .btn i{
     font-size: 2.8rem;
     line-height: 70px;
     font-weight: 600;
+    color:#000000;
 }
 .invent .invent_text h1 span{
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
@@ -908,6 +909,7 @@ section .main .main_content .main_text .pargraph .btn i{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.5s;
+    text-decoration: unset;
 }
 .tranding-slide .tranding-slide-content-bottom i{
     position: absolute;
