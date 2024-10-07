@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+    font-family: "Outfit", sans-serif;;
 }
 html {
     scroll-behavior: smooth;
@@ -24,6 +24,9 @@ html {
     --white-color: white ;
     --black-color: #000000 ;
     --opinions-background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2 50% ) ;
+}
+.display {
+    display: none;
 }
 /* constants */
 .home {
@@ -175,16 +178,12 @@ section .main .main_content .main_text .pargraph .btn{
     outline: none;
     border: none;
 }
-section .main .main_content .main_text .pargraph .btn i{
-    font-size: 0.7rem;
+section .main .main_content .main_text .pargraph .btn img{
     position: absolute;
     padding: 3px;
-    outline: none;
-    border: none;
     padding-bottom: 0;
     margin-right: -2.5rem;
-    border: 2px solid var(--white-color);
-    border-radius: 50%;
+    cursor: pointer;
 }
 /* suporter */
 .suport {
@@ -223,7 +222,7 @@ section .main .main_content .main_text .pargraph .btn i{
 .suport .suport_img{
     align-items: center;
     margin: 0 10px;
-    width: 100%;
+    width: auto;
     height: 100%;
     padding: 1.5rem 2rem;
     background: var(--white-color);
@@ -281,14 +280,12 @@ section .main .main_content .main_text .pargraph .btn i{
     background: linear-gradient(to right,#4a66ea,#a845e2);
     border-radius: 10px;
 }
-.invent .invent_text .btn i{
-    font-size: 0.9rem;
+.invent .invent_text .btn img{
     position: absolute;
     padding: 3px;
     padding-bottom: 0;
     margin-left: 0.5rem;
-    border: 2px solid var(--white-color);
-    border-radius: 50%;
+    cursor: pointer;
 }
 /* services */
 .services{
@@ -320,13 +317,15 @@ section .main .main_content .main_text .pargraph .btn i{
     position: relative;
     width: 40%;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     line-height: 50px;
 }
 .services .box .anther p{
     position: relative;
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 .services .box .anther p::before{
     content: '';
@@ -340,25 +339,43 @@ section .main .main_content .main_text .pargraph .btn i{
     content: '';
     background: transparent;
 }
-.services .box .anther p .bi-chevron-down{
+.services .box .anther p img{
     position: absolute;
     right: 0;
-    font-size: 1.5rem;
-    height: 1.5rem; 
-    border-radius: 50%; 
+    top: 25%;
     z-index: 1;
+    cursor: pointer;
 }
-.services .box .anther p .bi-chevron-down::after{
-    content: '';
+.services .show_services {
     position: absolute;
-    left: -1px;
-    top: 0.6rem;
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    background: transparent;
-    border: 2px solid var(--black-color);
-    z-index: -1;
+    opacity: 0;
+}   
+.services #show_services_1.active {
+    position: relative;
+    opacity: 1;
+    transition: all .2s linear;
+}
+.services #show_services_2.active {
+    position: relative;
+    opacity: 1;
+    transition: all .2s linear;
+}
+.services #show_services_3.active {
+    position: relative;
+    opacity: 1;
+    transition: all .2s linear;
+}
+.services #show_services_4.active {
+    position: relative;
+    opacity: 1;
+    transition: all .2s linear;
+}
+.services .show_services img{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: 1;
+    cursor: pointer;
 }
 .services .box .anther h2{
     font-size: 2rem;
@@ -642,9 +659,9 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 100000%;
     height: 1px;
     top: 29rem;
-    left: 65rem;
+    left: 3rem;
     background: var(--white-color);
-    position: absolute;
+    position: fixed;
     z-index: 100;
 } 
 .opinions .opinions_revew {
@@ -674,7 +691,7 @@ section .main .main_content .main_text .pargraph .btn i{
     padding-top: 3rem;
 }
 .opinions .cust_reviwe .img_cust img{
-    width: 100%;
+    width: auto;
     height: 100%;
     background-size: cover;
 }
