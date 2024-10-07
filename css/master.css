@@ -1,3 +1,4 @@
+/* constants */
 *{
     margin: 0;
     padding: 0;
@@ -16,8 +17,15 @@ html {
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    background: linear-gradient(#00eef8,#4a66ea,#a845e2);
+    background: linear-gradient(to bottom ,#00eef8,#4a66ea,#a845e2);
 }
+:root{
+    --main-background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    --white-color: white ;
+    --black-color: #000000 ;
+    --opinions-background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2 50% ) ;
+}
+/* constants */
 .home {
     position: relative;
     overflow-x: hidden;
@@ -38,7 +46,7 @@ section nav {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 8PX rgba(0,0,0,0.6);
-    background: white;
+    background: var(--white-color);
     padding: 15px 0;
     top: 3%;
     left: 5%;
@@ -60,12 +68,13 @@ section nav ul {
 }
 section nav ul li {
     display: inline-block;
-    margin: 0 15px;
+    gap: 19px;
+    margin-right:44px;
 }
 section nav ul li a{
     text-decoration: none;
     position: relative;
-    font-size: larger;
+    font-size: 18px;
     font-family: "Outfit";
     background: #333;
     -webkit-background-clip: text;
@@ -73,8 +82,13 @@ section nav ul li a{
     -webkit-text-fill-color: transparent;   
     transition: 0.5s;
 }
+section nav ul li .active{
+    background: var(--main-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
 section nav ul li a:hover{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
 }
@@ -87,13 +101,14 @@ section nav .serch {
     transition: 0.3s;
 }
 section nav .serch i{
-    background: #777;
+    background: #3f3f3f;
+    font-size: 1.5rem;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;  
 }
 section nav .serch i:hover{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
 }
@@ -105,22 +120,26 @@ section .main .main_content {
     justify-content: center;
     text-align: center;
     margin: auto ;
-    color: white;
-    margin-top: -2rem;
+    color: var(--white-color);
+    margin-top: -3rem;
 } 
 section .main .main_content .main_text {
     z-index: 2;
 }
 section .main .main_content .main_text h1{
     position: relative;
-    font-size: 90px;
-    line-height: 70px;
+    font-size: 78px;
+    line-height: 31px;
+    font-weight: 700;
 }
 section .main .main_content .main_text h1 span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
     margin-left: 3px;
+}
+.typed-cursor.typed-cursor--blink {
+    width: 100px !important;
 }
 section .main .main_content .main_text .pargraph{
     position: relative;
@@ -129,37 +148,42 @@ section .main .main_content .main_text .pargraph{
     align-items: center;
     justify-content: center;
     margin: auto ;
-    color: white;
+    color: var(--white-color);
 }
 section .main .main_content .main_text .pargraph P{
     position: relative;
-    font-size: 30px;
-    line-height: 70px;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    font-size: 25px;
+    line-height: 81px;
+    font-weight: 500;
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
 section .main .main_content .main_text .pargraph .btn{
+    display: flex;
+    align-items: center;
+    justify-content: right;
     text-decoration: none;
     position: absolute;
     top: 115%;
-    font-size: 20px;
-    color: white;
-    padding: 20px 90px 20px 40px;
-    background: linear-gradient(to right,#4a66ea,#a845e2);
-    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+    padding: 10px 70px 10px 30px;
+    background: var(--main-background);
+    border-radius: 9px;
     outline: none;
     border: none;
 }
 section .main .main_content .main_text .pargraph .btn i{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     position: absolute;
     padding: 3px;
     outline: none;
     border: none;
     padding-bottom: 0;
-    margin-left: 2rem;
-    border: 2px solid #fff;
+    margin-right: -2.5rem;
+    border: 2px solid var(--white-color);
     border-radius: 50%;
 }
 /* suporter */
@@ -171,7 +195,7 @@ section .main .main_content .main_text .pargraph .btn i{
     justify-content: space-between;
     border-radius: 1rem;
     height: 110px;
-    background: white;
+    background: var(--white-color);
     padding: .5rem;
     margin: 0 8% ;
     z-index: 1000;
@@ -182,7 +206,7 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 30px;
     height: 30px;
     top: 2.7rem;
-    background: #fff;
+    background: var(--white-color);
     left: -1.3rem;
     -webkit-mask-image: radial-gradient( circle 10px at 0 0, transparent , transparent 20px, black 21px);
 }
@@ -192,7 +216,7 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 30px;
     height: 30px;
     top: 2.7rem;
-    background: #fff;
+    background: var(--white-color);
     right: -1.3rem;
     -webkit-mask-image: radial-gradient( circle 10px at 1.9rem 0, transparent , transparent 20px, black 21px);
 }
@@ -202,7 +226,7 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 100%;
     height: 100%;
     padding: 1.5rem 2rem;
-    background: #fff;
+    background: var(--white-color);
 }
 .suport .suport_img img{
     width: 100%;
@@ -235,10 +259,10 @@ section .main .main_content .main_text .pargraph .btn i{
     font-size: 2.8rem;
     line-height: 70px;
     font-weight: 600;
-    color:#000000;
+    color:var(--black-color);
 }
 .invent .invent_text h1 span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -263,7 +287,7 @@ section .main .main_content .main_text .pargraph .btn i{
     padding: 3px;
     padding-bottom: 0;
     margin-left: 0.5rem;
-    border: 2px solid #fff;
+    border: 2px solid var(--white-color);
     border-radius: 50%;
 }
 /* services */
@@ -288,7 +312,7 @@ section .main .main_content .main_text .pargraph .btn i{
     font-weight: 600;
 }
 .services .box .header span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
@@ -333,13 +357,13 @@ section .main .main_content .main_text .pargraph .btn i{
     height: 27px;
     border-radius: 50%;
     background: transparent;
-    border: 2px solid #000000;
+    border: 2px solid var(--black-color);
     z-index: -1;
 }
 .services .box .anther h2{
     font-size: 2rem;
     font-weight: 600;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -347,7 +371,7 @@ section .main .main_content .main_text .pargraph .btn i{
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 30px;
-    color: #000000;
+    color: var(--black-color);
     margin: 10px 0;
 }
 .services .box .anther .btt {
@@ -358,18 +382,18 @@ section .main .main_content .main_text .pargraph .btn i{
     position: absolute;
     font-size: 1.2rem;
     top: 0.4rem;
-    color: #000000;
+    color: var(--black-color);
 }
 
 .services .box .anther .btt .btn{
     --border-width: 1px ;
     --border-radius: 0.5rem ;
     font: inherit;
-    background:  linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
+    background:  var(--main-background);
     border: 0;
     top: 0.4rem;
-    color: #fff;
-    padding: 0.5rem 2.1rem;
+    color: var(--white-color);
+    padding: 0.3rem 2.1rem;
     position: relative;
     margin-top: 3.5rem;
     width: 100%;
@@ -378,10 +402,10 @@ section .main .main_content .main_text .pargraph .btn i{
 }
 .services .box .anther .btt .btn a {
     text-decoration: none;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     position: relative;
     cursor: pointer;
 }
@@ -390,10 +414,10 @@ section .main .main_content .main_text .pargraph .btn i{
     margin-left: 20px;
     font-size: 1.3rem;
     right: 0;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    rotate: -50deg;
+    rotate: -40deg;
 }
 .services .box .anther .btt .btn::after {
     content: '';
@@ -427,13 +451,13 @@ section .main .main_content .main_text .pargraph .btn i{
 .rectangel h1{
     font-size: 3.2rem;
     margin-bottom: 3rem;
-    color: #000000;
+    color: var(--black-color);
     font-weight: 600;
 }
 .rectangel a{
     position: relative;
     margin-right: 2rem;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -443,7 +467,7 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 100%;
     height: 2px;
     top: 1.2rem;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
 }
 .rectangel .header span{
     color: #a845e2;
@@ -491,13 +515,13 @@ section .main .main_content .main_text .pargraph .btn i{
     padding: 1rem 2rem;
 }
 .rectangel .vr_text .vr_par {
-    color: #000000;
+    color: var(--black-color);
     font-weight: 600px;
     font-size: 1.2rem;
     transition: 0.3;
 }
 .rectangel .card_vr:hover .vr_text .vr_par {
-    color: #fff;
+    color: var(--white-color);
 }
 .rectangel .vr_text .vr_link {
     position: relative;
@@ -510,7 +534,7 @@ section .main .main_content .main_text .pargraph .btn i{
 .rectangel .vr_text .vr_link i{
     font-size: 1.5rem;
     padding: 0.8rem;
-    color: #fff;
+    color: var(--white-color);
 }
 .rectangel .card_vr:hover .vr_text .vr_link {
     background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2, #a845e2);
@@ -521,7 +545,7 @@ section .main .main_content .main_text .pargraph .btn i{
     padding-bottom: 5rem;
 }
 .decoded .decoded_future{
-    background: #000000;
+    background: var(--black-color);
     background-image: url(../img/decadod.png);
     background-position: top -15rem right -5rem;
     background-repeat: no-repeat;
@@ -535,16 +559,16 @@ section .main .main_content .main_text .pargraph .btn i{
     font-size: 3rem;
     font-weight: 600;
     width: 45%;
-    color: #fff;
+    color: var(--white-color);
 }
 .decoded .decoded_future h2 span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .decoded .decoded_future .par_projecet{
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white-color);
     font-weight: 400;
     margin: 2rem 0;
     line-height: 35px;
@@ -556,7 +580,7 @@ section .main .main_content .main_text .pargraph .btn i{
     font: inherit;
     background:  linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
     border: 0;
-    color: #fff;
+    color: var(--white-color);
     padding: 1rem 2rem;
     position: relative;
     border-radius: var(--border-radius);
@@ -564,7 +588,7 @@ section .main .main_content .main_text .pargraph .btn i{
 }
 .decoded .decoded_future .btn a {
     text-decoration: none;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1rem;
@@ -576,7 +600,7 @@ section .main .main_content .main_text .pargraph .btn i{
     margin-left: 10px;
     font-size: 1.3rem;
     right: 0;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     rotate: -50deg;
@@ -586,7 +610,7 @@ section .main .main_content .main_text .pargraph .btn i{
     display: block;
     width: calc(100% - calc(var(--border-width) * 2));
     height: calc(100% - calc(var(--border-width) * 2));
-    background: #000000;
+    background: var(--black-color);
     position: absolute;
     top: var(--border-width);
     left: var(--border-width);
@@ -594,137 +618,137 @@ section .main .main_content .main_text .pargraph .btn i{
     z-index: -1;
     transition: 0.3s;
 }
-/* expert */
-.expert {
+/* opinions */
+.opinions {
     padding-top: 5rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.expert h1 {
+.opinions h1 {
     font-size: 3em;
     font-weight: 600;
     padding: 0 0 4rem 0rem;
-    color: #000000;
+    color: var(--black-color);
 }
-.expert h1 span {
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+.opinions h1 span {
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.expert .swiper-wrapper::after {
+.opinions .swiper-wrapper::after {
     content: '';
     width: 100000%;
     height: 1px;
     top: 29rem;
     left: 65rem;
-    background: #fff;
+    background: var(--white-color);
     position: absolute;
     z-index: 100;
 } 
-.expert .expert_revew {
+.opinions .opinions_revew {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.expert .code-slider {
+.opinions .code-slider {
     position: relative;
     width: 95%;
     margin-left: 0;
     margin-right: 1rem;
 }
-.expert .cust_reviwe {
+.opinions .cust_reviwe {
     position: relative;
     width: 432px;
     height: 594px;
-    background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2, #9f41e2, #9f41e2, #9f41e2 );
+    background: var(--opinions-background);
     padding:0 2rem ;
     margin-right: 1rem;
     border-radius: .5rem;
 }
-.expert .cust_reviwe .img_cust{
+.opinions .cust_reviwe .img_cust{
     width: 180px;
     height: 180px;
     padding-top: 3rem;
 }
-.expert .cust_reviwe .img_cust img{
+.opinions .cust_reviwe .img_cust img{
     width: 100%;
     height: 100%;
     background-size: cover;
 }
-.expert .cust_reviwe .par{
+.opinions .cust_reviwe .par{
     padding: 3rem 2rem 3rem 1rem;
 }
-.expert .cust_reviwe .par p{
-    color: #fff;
+.opinions .cust_reviwe .par p{
+    color: var(--white-color);
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 2rem;
 }
-.expert .cust_reviwe .name_cust {
-    color: #fff;
+.opinions .cust_reviwe .name_cust {
+    color: var(--white-color);
     padding: 3rem 0 2rem 1rem;
 }
-.expert .cust_reviwe .name_cust h3{
+.opinions .cust_reviwe .name_cust h3{
     font-size: 1.3rem;
     font-weight: 600;
 }
-.expert .cust_reviwe .name_cust p{
+.opinions .cust_reviwe .name_cust p{
     font-size: 1.2rem;
 }
-.expert .cust {
+.opinions .cust {
     width:255px;
     height: 594px;
     position: relative;
-    background: linear-gradient(to right bottom,#00eff8,#22a6f1,#445de9, #9f41e2, #9f41e2, #9f41e2, #9f41e2 );
+    background: var(--opinions-background);
     padding-left:2rem;
     border-radius: .5rem;
     margin-right: 1rem;
 }
-.expert .cust .img_cust{
+.opinions .cust .img_cust{
     position: absolute;
     width: 80px;
     height: 80px;
     top: 1.8rem;
     right: 1.3rem;
 }
-.expert .cust .img_cust img{
+.opinions .cust .img_cust img{
     width: 100%;
     height: 100%;
     background-size: cover;
 }
-.expert .cust .par{
+.opinions .cust .par{
     padding: 14.5rem .5rem 1rem .5rem;
 } 
-.expert .cust .par p{
-    color: #fff;
+.opinions .cust .par p{
+    color: var(--white-color);
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
 }
-.expert .cust .name_cust{
-    color: #fff;
+.opinions .cust .name_cust{
+    color: var(--white-color);
     padding: 6rem 0 2rem 1rem;
 }
-.expert .cust .name_cust h3{
+.opinions .cust .name_cust h3{
     font-size: 1.3rem;
     font-weight: 600;
 }
-.expert .cust .name_cust p{
+.opinions .cust .name_cust p{
     font-size: 1.2rem;
 }
-.expert .img_code {
+.opinions .img_code {
     margin-left: 3.5rem;
     margin-top: 18rem;
 }
-.expert .cod_e {
+.opinions .cod_e {
     position: relative;
     width: 30%;
     height: 594px;
 }
-.expert .cod_e .img_code {
+.opinions .cod_e .img_code {
     width: 115px;
     height: 115px;
     margin-top: 19rem;
@@ -734,7 +758,7 @@ section .main .main_content .main_text .pargraph .btn i{
     position: absolute;
     margin-top: 13.5rem;
     left: 45%;
-    color: #fff;
+    color: var(--white-color);
     padding: 2.5rem;
     background: #b4b3ba;
     border-radius: 50%;
@@ -742,7 +766,7 @@ section .main .main_content .main_text .pargraph .btn i{
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background: #000000;
+    background: var(--black-color);
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
@@ -776,7 +800,7 @@ section .main .main_content .main_text .pargraph .btn i{
 
 }
 .communicate .texet_communicate h2 span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -820,8 +844,13 @@ section .main .main_content .main_text .pargraph .btn i{
     border-radius: 1.5rem;
     transition: 0.5s;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    cursor: pointer;
 }
-
+#tranding .tranding-slider .active {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    z-index: 2 !important;
+}
 #tranding-slide-1 {
     z-index: 1 !important;
     margin-left: 0.1rem;
@@ -847,7 +876,7 @@ section .main .main_content .main_text .pargraph .btn i{
 #tranding-slide-4:hover,
 #tranding-slide-5:hover,
 #tranding-slide-6:hover{
-    background-color: #000000;
+    background-color: var(--black-color);
     z-index: 2 !important;
 }
 @media (max-width:500px) {
@@ -874,7 +903,7 @@ section .main .main_content .main_text .pargraph .btn i{
     object-fit: cover;
 }
 .tranding-slide .tranding-slide-img h3 {
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
@@ -895,33 +924,13 @@ section .main .main_content .main_text .pargraph .btn i{
     top: 5rem;
     
 }
-#tranding-slide-1 .tranding-slide-content-bottom a{
-    position: absolute;
-    display: block;
-    top: 95%;
-    left: 85%;
-    transform: translate(-15%, -5%);
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.5s;
-}
-#tranding-slide-1 .tranding-slide-content-bottom i{
-    position: absolute;
-    top: 97%;
-    left: 85%;
-    transform: translate(-15%, -3%);
-    color: #fff;
-    transition: 0.5s;
-    display: none;
-}
 .tranding-slide .tranding-slide-content-bottom a{
     position: absolute;
     display: block;
     top: 12rem;
     left: 85%;
     transform: translate(-15%, -5%);
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.5s;
@@ -932,27 +941,34 @@ section .main .main_content .main_text .pargraph .btn i{
     top: 12rem;
     left: 85%;
     transform: translate(-15%, -3%);
-    color: #fff;
+    color: var(--white-color);
     transition: 0.5s;
     display: none;
 }
-#tranding-slide-1:hover .tranding-slide-content-bottom a,
 .tranding-slide:hover .tranding-slide-content-bottom a{
     display: none;
 }
-#tranding-slide-1:hover .tranding-slide-content-bottom i,
 .tranding-slide:hover .tranding-slide-content-bottom i{
+    display: block;
+}
+.active .tranding-slide-content-bottom a{
+    display: none;
+}
+.active .tranding-slide-content-bottom i{
     display: block;
 }
 .tranding-slide-content .tranding-slide-content-bottom .slide-name{
     font-size: 1rem;
-    color: #000000;
+    color: var(--black-color);
     line-height: 2rem;
     padding: 2rem;
     transform: 0.5s;
 }
+.active .tranding-slide-content .tranding-slide-content-bottom .slide-name{
+    color: var(--white-color);
+}
 .tranding-slide:hover .tranding-slide-content .tranding-slide-content-bottom .slide-name{
-    color: #fff;
+    color: var(--white-color);
 }
 
 .rating ion-icon {
@@ -1006,7 +1022,7 @@ section .main .main_content .main_text .pargraph .btn i{
 }
 
 .tranding-slider-control .slider-arrow {
-    background: var(--white);
+    background: var(--white-color);
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -1044,13 +1060,13 @@ section .main .main_content .main_text .pargraph .btn i{
     margin-bottom: 2rem;
 }
 .contant_us h1 span{
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .contant_us .contant_reviwo {
-    background: #000000;
-    color: #fff;
+    background: var(--black-color);
+    color: var(--white-color);
     padding-top: 4rem;
     padding-left: 3.5rem;
     border-radius: 0.5rem;
@@ -1078,7 +1094,7 @@ section .main .main_content .main_text .pargraph .btn i{
     font: inherit;
     background:  linear-gradient(to right,#00eef8,#4a66ea,#a845e2,#a845e2);
     border: 0;
-    color: #fff;
+    color: var(--white-color);
     padding: 1rem 2rem;
     position: relative;
     text-decoration: none;
@@ -1090,7 +1106,7 @@ section .main .main_content .main_text .pargraph .btn i{
     display: block;
     width: calc(100% - calc(var(--border-width) * 2));
     height: calc(100% - calc(var(--border-width) * 2));
-    background: #000000;
+    background: var(--black-color);
     position: absolute;
     top: var(--border-width);
     left: var(--border-width);
@@ -1111,14 +1127,14 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 100%;
     padding: 2rem 1rem .5rem 0rem;
     background: transparent;
-    color: #fff;
+    color: var(--white-color);
     outline: none;
-    border-color: transparent transparent #fff  transparent;
+    border-color: transparent transparent var(--white-color)  transparent;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 .contant_us .contant_reviwo form input::placeholder {
-    color: #fff;
+    color: var(--white-color);
 }
 .contant_us .contant_reviwo form input:nth-child(3) {
     margin-bottom: 3rem;
@@ -1131,7 +1147,7 @@ section .main .main_content .main_text .pargraph .btn i{
     text-decoration: none;
     align-items: center;
     padding: .2rem 4rem;
-    background: linear-gradient(to right,#00eef8,#4a66ea,#a845e2);
+    background: var(--main-background);
     font-size: 3rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
@@ -1171,7 +1187,7 @@ section .main .main_content .main_text .pargraph .btn i{
     width: 100%;
     height: 100%;
     top: 0;
-    background: #000000;
+    background: var(--black-color);
     background-image: url(../img/Frame.png);
     background-position: center;
     background-size: 80rem;
@@ -1184,7 +1200,7 @@ section .main .main_content .main_text .pargraph .btn i{
     left: -20%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,#000, #000000,transparent);
+    background: linear-gradient(to top,#000, var(--black-color),transparent);
     clip-path: circle(700px at right);
     z-index: -1;
 }
@@ -1194,7 +1210,7 @@ section .main .main_content .main_text .pargraph .btn i{
     left: -45%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,#000, #000000,transparent);
+    background: linear-gradient(to top,#000, var(--black-color),transparent);
     clip-path: circle(700px at right);
     z-index: -1;
 }
@@ -1202,7 +1218,7 @@ section .main .main_content .main_text .pargraph .btn i{
     z-index: 2 ;
 }
 .footer .footer_img P{
-    color: #FFF;
+    color: var(--white-color);
     margin: 2.5rem 0;
     line-height: 2rem;
     z-index: 2;
@@ -1219,7 +1235,7 @@ section .main .main_content .main_text .pargraph .btn i{
 }
 .footer ul li a{
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
 }
 .footer ul li:hover a{
     color: #f7f7f8;
@@ -1234,7 +1250,7 @@ section .main .main_content .main_text .pargraph .btn i{
     top: 50%;
     left: 10%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: var(--white-color);
     font-size: 1.3rem;
     align-items: center;
     margin-right: 1rem;
@@ -1259,7 +1275,7 @@ section .main .main_content .main_text .pargraph .btn i{
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #fff;
+    background: var(--white-color);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

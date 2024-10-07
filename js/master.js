@@ -1,4 +1,5 @@
 
+// code auto type home 
 var typed = new Typed('.auto_type',{
     strings: ["innovate","revolutionize", "ideate", "develop", "transform","code"],
     typeSpeed : 150,
@@ -30,7 +31,7 @@ var codeSlider = new Swiper('.code-slider', {
 // swiber tranding 
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
-    grabCursor: true,
+    grabCursor: false,
     centeredSlides: false,
     leftredSlides: true,
     loop: true,
@@ -47,14 +48,23 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     },
 });
 // #################
-
 $(document).ready(function() {
-    $(".btn_contact").hover(function() {
+    $(".navbar").click(function() {
+        $(".navbar").removeClass("active");
+        $(this).addClass("active");
+    })
+});
+// #################
+$(document).ready(function() {
+    $(".tranding-slide").click(function() {
+        $(".tranding-slide").removeClass("active");
+        $(this).addClass("active");
+    })
+});
+// #################
+$(document).ready(function() {
+    $(".btn_contact").click(function() {
         $(".btn_contact").removeClass("active");
         $(this).addClass("active");
     })
-    // $(".btn").click(function() {
-    //     $(".btn").removeClass("active");
-    //     $(this).addClass("active");
-    // })
 });
