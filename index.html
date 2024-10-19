@@ -31,13 +31,22 @@
             <div class="logo">
                 <img src="img/logo.png" alt="we code">
             </div>
-
-            <ul>
+            <img src="img/open nav.svg" id="open_nav" alt="..." />
+            
+            <ul class="nav_b">
                 <li><a href="#home" class="navbar active">Home</a></li>
                 <li><a href="#Services" class="navbar">Services</a></li>
                 <li><a href="#About" class="navbar" >About We Code</a></li>
                 <li><a href="#Projectes" class="navbar ">Projectes</a></li>
                 <li><a href="#Contact" class="navbar ">Contact Us</a></li>
+            </ul>
+            <ul class="nav_b_media">
+                <li><a href="#home" class="navbar active">Home</a></li>
+                <li><a href="#Services" class="navbar">Services</a></li>
+                <li><a href="#About" class="navbar" >About We Code</a></li>
+                <li><a href="#Projectes" class="navbar ">Projectes</a></li>
+                <li><a href="#Contact" class="navbar ">Contact Us</a></li>
+                <li id="close_nav"><a href="#" ><img src="img/close nav.svg"  alt="..." /></a></li>
             </ul>
 
             <div class="serch">
@@ -61,28 +70,30 @@
     </section>
     <!-- section suporter -->
     <section>
-        <div class="suport">
-            <div class="suport_img"><img src="img/besnes.png" alt="..."></div>
-            <div class="suport_img"><img src="img/woox.png" alt="..."></div>
-            <div class="suport_img"><img src="img/bitgo.png" alt="..."></div>
-            <div class="suport_img"><img src="img/anker.png" alt="..."></div>
-            <div class="suport_img"><img src="img/metamask.png" alt="..."></div>
+        <div class="suport row">
+            <div class="suport_img col-md-2 col-sm-12"><img src="img/besnes.png" alt="..."></div>
+            <div class="suport_img col-md-2 col-3"><img src="img/woox.png" alt="..."></div>
+            <div class="suport_img col-md-2 col-3"><img src="img/bitgo.png" alt="..."></div>
+            <div class="suport_img col-md-2 col-3"><img src="img/anker.png" alt="..."></div>
+            <div class="suport_img col-md-2 col-3"><img src="img/metamask.png" alt="..."></div>
         </div>
     </section>
     <!-- section invent  -->
     <section class="invent">
-        <div class="container">
-            <div class="invent_img">
-                <img src="img/Group.png">
-            </div>
-            <div class="invent_text">
-                <h1> <span> We code,</span> for the inevitability
-                    of digitalization!</h1>
-                <p>Our approach extends beyond simply delivering professional software development services. We tailor our cutting-edge solutions to fit your business goals, and drive success.</p>
-                <a href="#" class="btn">
-                    Start your journey
-                    <img src="img/down-arrow-svgrepo-com (1) 1.svg" alt="..." />
-                </a>
+        <div class="container ">
+            <div class="row">
+                <div class="invent_img col-md-4 col-sm-4 col-12">
+                    <img src="img/Group.png">
+                </div>
+                <div class="invent_text col-md-8 col-sm-8 col-12">
+                    <h1> <span> We code,</span> for the inevitability
+                        of digitalization!</h1>
+                    <p>Our approach extends beyond simply delivering professional software development services. We tailor our cutting-edge solutions to fit your business goals, and drive success.</p>
+                    <a href="#" class="btn">
+                        Start your journey
+                        <img src="img/down-arrow-svgrepo-com (1) 1.svg" alt="..." />
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -239,93 +250,104 @@
         <div class="container">
             <h1>Hear from those who <span>chose</span> us</h1>
             <div class="opinions_revew">
-                <div class="swiper code-slider">
-                    <div class=" swiper-wrapper">
-                        <div class="swiper-slide cust_reviwe " id="cust_1">
-                            <div class="img_cust">
-                                <img src="img/Frame-1.png" alt="..." />
-                            </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
-                            </div>
-                            <div class="name_cust">
-                                <h3>Amer</h3>
-                                <p>DE.CI Furniture</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cust" id="cust_2">
-                            <div class="img_cust">
-                                <img src="img/Frame-2.png" alt="..." />
-                            </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
-                            </div>
-                            <div class="name_cust">
-                                <h3>Omar</h3>
-                                <p>Zinco</p>
+                <div class="cust-reviwe">
+
+                    <div class="slide">
+                        <div class="item"  >
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-1.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Amer</h3>
+                                    <p>DE.CI Furniture</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide cust">
-                            <div class="img_cust">
-                                <img src="img/Frame-3.png" alt="..." />
-                            </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
-                            </div>
-                            <div class="name_cust">
-                                <h3>Kani Jon</h3>
-                                <p>Office Hub</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide cust_reviwe " id="cust_1">
-                            <div class="img_cust">
-                                <img src="img/Frame-1.png" alt="..." />
-                            </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
-                            </div>
-                            <div class="name_cust">
-                                <h3>Amer</h3>
-                                <p>DE.CI Furniture</p>
+                        <div class="item">
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-2.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Omar</h3>
+                                    <p>Zinco</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide cust" id="cust_2">
-                            <div class="img_cust">
-                                <img src="img/Frame-2.png" alt="..." />
-                            </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
-                            </div>
-                            <div class="name_cust">
-                                <h3>Omar</h3>
-                                <p>Zinco</p>
+                        <div class="item">
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-3.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Kani Jon</h3>
+                                    <p>Office Hub</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide cust">
-                            <div class="img_cust">
-                                <img src="img/Frame-3.png" alt="..." />
+                        <div class="item"  >
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-1.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Amer</h3>
+                                    <p>DE.CI Furniture</p>
+                                </div>
                             </div>
-                            <div class="par">
-                                <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-2.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Omar</h3>
+                                    <p>Zinco</p>
+                                </div>
                             </div>
-                            <div class="name_cust">
-                                <h3>Kani Jon</h3>
-                                <p>Office Hub</p>
+                        </div>
+                                                <div class="item">
+                            <div class="content">
+                                <div class="img_cust">
+                                    <img src="img/Frame-3.png" alt="..." />
+                                </div>
+                                <div class="par">
+                                    <p>“Our expert team uses AI to craft innovative solutions that analyse data, automate processes, and boost decision-making, keeping you ahead of the curve.”</p>
+                                </div>
+                                <div class="name_cust">
+                                    <h3>Kani Jon</h3>
+                                    <p>Office Hub</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+            
+                    <div class="button">
+                        <button class="next"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="prev"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+            
                 </div>
                 <div class=" cod_e">
                     <div class="img_code">
                         <img src="img/code.png" alt="..">
-                    </div>
-                    <div class="code-slider-control">
-                        <div class="swiper-button-prev slider-arrow">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-button-next slider-arrow">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -465,12 +487,13 @@
                     <p>We craft tailored solutions that perfectly align with your business needs.</p>
                 </div>
                 <div class="row">
+                    <div class="groub_button">
+                        <a type="submit" id="box" class="btn_contact active">Software Development</a>
+                        <a type="submit" id="box" class="btn_contact">Data Analysis & Dashboards</a>
+                        <a type="submit" id="box" class="btn_contact">Digital Marketing</a>
+                        <a type="submit" id="box" class="btn_contact">E Commerce E-2-E</a>
+                    </div>
                     <div class="col-md-8" >
-                        <div class="groub_button">
-                            <a type="submit" id="box" class="btn_contact active">Software Development</a>
-                            <a type="submit" id="box" class="btn_contact">Data Analysis & Dashboards</a>
-                            <a type="submit" id="box" class="btn_contact">Digital Marketing</a>
-                        </div>
                         <form action="" method="post">
                             <input type="text" name="name" required maxlength="100" placeholder="your name" id="box">
                             <input type="email" name="email" required maxlength="100" placeholder="your email" id="box">
